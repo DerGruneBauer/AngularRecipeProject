@@ -6,10 +6,14 @@
     height: 83vh;
 }
 
+.searchW {
+    color: rgba(56, 54, 54, 0.75);
+}
 .emptyMessage {
     margin-top: 30px;
     font-size: 20px;
     text-align: center;
+    color: rgba(255, 255, 255, 0.75);
 }
 
 /* Input and Buttons for Searching */
@@ -92,3 +96,8 @@ button:hover {
 .otherInfo {
     margin: 0 0 10px 10px;
 }
+ .chef {
+     display: flex;
+     height: 70%;
+     width: 50%
+ }

@@ -1,4 +1,28 @@
 img {
     height: 100px;
     width: 100px;
+    display: flex;
+    justify-content: center;
 }
+
+.individualRecipe {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    display: inline-block
+}
+
+.otherInfo {
+    margin: 0 0 10px 10px;
+}
+
+.recipeListWrapper {
+    margin: 30px 20px 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    border: solid black 2px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 20px -7px rgba(0,0,0,0.54);
+}
+
