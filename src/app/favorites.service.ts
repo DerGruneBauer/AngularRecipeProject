@@ -13,4 +13,11 @@ export class FavoritesService {
   getFavorites(): any[] {
     return this.favorites;
   }
+
+  //This will take the recipe/object variable we sent over from the search criteria page and use it in this method
+  //It will push that recipe into the array we declared above on this favorties service page. (favorites: any[] = [])
+  addFavorite(recipe: object) {
+    this.favorites.push(recipe);
+    return this;
+  }
 }

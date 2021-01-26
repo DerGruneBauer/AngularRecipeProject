@@ -8,6 +8,7 @@ import { FavoritesPageComponent } from './favorites-page/favorites-page.componen
 import { RecipesListComponent } from './recipes-list/recipes-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowseFeatureComponent } from './browse-feature/browse-feature.component';
+import { AboutComponent } from './about/about.component';
 // import { RecipePopupComponent } from './recipe-popup/recipe-popup.component';
 // import { HeaderComponent } from './header/header.component';
 // import { FooterComponent } from './footer/footer.component';
@@ -20,6 +21,7 @@ import { BrowseFeatureComponent } from './browse-feature/browse-feature.componen
     FavoritesPageComponent,
     RecipesListComponent,
     BrowseFeatureComponent,
+    AboutComponent,
     // RecipePopupComponent,
     // HeaderComponent,
     // FooterComponent,

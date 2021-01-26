@@ -8,7 +8,6 @@ import { RecipeServiceService } from '../recipe-service.service';
   styleUrls: ['./favorites-page.component.css'],
 })
 export class FavoritesPageComponent implements OnInit {
-  favorites: any[];
 
   constructor(
     private RecipeServiceService: RecipeServiceService,
@@ -16,6 +15,12 @@ export class FavoritesPageComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.favorites = this.favoritesService.getFavorites();
+   
+  }
+
+  //this keyword below "get" will allow us to call this function which will allow us to return all of the favorites stored in the array. 
+  //now in our html we can simply say "let item of favorites" and it will automatically call this and retun the array/each item in it. 
+  get favorites(){
+    return this.favoritesService.getFavorites();
   }
 }
