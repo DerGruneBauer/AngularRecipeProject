@@ -17,6 +17,14 @@
   <div class="favorites"></div>
   <!-- <div *ngIf="favoriteRecipes.length === 0">No Favorites Yet!</div> -->
   <div class="favorite-recipes-container">
+    
+
+    <!-- For Delia. Created a div here that will now take our favorites array from the get method in our 'favorites-page.ts' 
+    and iterate through all of the items in it. -->
+    <div class="individualFavoriteRecipe" *ngFor = "let item of favorites; let i=index;">
+      <div class="name">{{ this.favorites[i].recipe.label }}</div>
+    </div>
+
     <!-- put each favorited recipe in here -->
   </div>
 </div>
