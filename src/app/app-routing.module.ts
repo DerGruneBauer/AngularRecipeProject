@@ -7,9 +7,9 @@ import { SearchCriteriaComponent } from './search-criteria/search-criteria.compo
 
 const routes: Routes = [
   { path: 'favorites', component: FavoritesPageComponent },
-  { path: '', component: RecipesListComponent },
   { path: 'recipeList', component: RecipesListComponent },
   { path: 'search', component: SearchCriteriaComponent },
+  { path: '', component: SearchCriteriaComponent },
   { path: 'home', component: AppComponent },
   // { path: '**', component: RecipesListComponent },
 ];
