@@ -6,8 +6,34 @@
             alt="{{ this.recipeList[i].recipe.label }}"
           />
     </div>
-    <!-- <div class="initialMessage" *ngIf = "recipeList.length < 1">Nothing to see. Why don't you search for something?</div> -->
-</div>
+<div class="searchItemsWrapper">
+        <div class="searchItem" *ngFor="let item of searchItems; let i = index">
+          <div
+            class="picture"
+            [style.background-image]="
+              'url(' + this.searchItems[i].recipe.image + ')'
+            "
+          ></div>
+          <div class="title">{{ this.searchItems[i].recipe.label }}</div>
+    
+          <div class="otherInfo">
+            <div class="calories">
+              <strong>Total Calories: </strong
+              >{{ this.searchItems[i].recipe.calories | number: "1.0-0" }} 
+            </div>
+            <div class="time">
+              <strong>Time to Make: </strong
+              >{{ this.searchItems[i].recipe.totalTime }} Minutes
+            </div>
+            <div class="servings">
+              <strong>Servings: </strong>{{ this.searchItems[i].recipe.yield }}
+            </div>
+          </div>
+
+
+
+
+
 
 <!-- Questions on how we want to set this up from a arcitechure perspective. We could have home screen with search query that opens
 up into new page once user clicks submit, or we could have home page be connected with recipe list page and search bar at top
@@ -19,4 +45,4 @@ in the recipe list component.  -->
     shows additional information. would need to create a new componenet to house this information.  -->
 <!-- ***Piggy-backing off of this, I think a pop up to show additional info is the way to go. It would be an image with the dish 
     (when you click anywhere on the image a pop up occurs with an ingredient list), caption below with dish name, 
-    link below to click for full recipe*** MH-->
+    link below to click for full recipe*** MH--> 

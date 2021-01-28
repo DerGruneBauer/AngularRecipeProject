@@ -8,9 +8,8 @@
     height: 84vh;
 }
 
-
 span {
-    color: black;
+    color:rgba(173, 132, 132, 0.815);
     font-size: 50px;
     font-weight: bold;
     font-family: 'Satisfy', cursive;
@@ -39,7 +38,7 @@ span {
 }
 
 input {
-  border: solid black 2px;
+  border: solid rgba(173, 132, 132) 2px;
   width: 300px;
   height: 30px;
   padding-left: 10px;
@@ -48,26 +47,29 @@ input {
   letter-spacing: 0.8px;
 }
 .browseButton {
-  border: solid black 2px;
+  border: solid rgba(173, 132, 132) 2px;
   height: 36px;
   width: 70px;
   font-weight: bold;
   letter-spacing: 1px;
   margin-right: 10px;
   border-radius: 5px;
+  background-color: rgba(173, 132, 132, 0.342);
 }
 .submitButton {
-  border: solid black 2px;
+  border: solid rgba(173, 132, 132) 2px;
   height: 36px;
   width: 70px;
   border-radius: 0 5px 5px 0;
   border-left: none;
   font-weight: bold;
   letter-spacing: 1px;
+  background-color: rgba(173, 132, 132, 0.342);
 }
 
 button:hover {
-  background-color: lightgray;
+  background-color: rgba(173, 132, 132);
+  color:rgba(255, 255, 255, 0.9)
 }
 
 /* Searched Items and Grid Styling */
@@ -87,7 +89,7 @@ button:hover {
     flex-direction: column;
     justify-content: space-between;
     background-color: whitesmoke;
-    border: solid darkslategray 2px;
+    border: solid rgba(173, 132, 132) 3px;
     height: 200px;
     border-radius: 10px;
     box-shadow: 6px 6px 20px -7px rgba(0,0,0,0.54);

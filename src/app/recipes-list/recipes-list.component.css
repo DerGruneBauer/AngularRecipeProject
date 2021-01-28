@@ -12,17 +12,37 @@ img {
     display: inline-block
 }
 
-.otherInfo {
-    margin: 0 0 10px 10px;
-}
-
 .recipeListWrapper {
-    margin: 30px 20px 30px 20px;
+    margin: 5%;
     display: flex;
-    justify-content: space-between;
-    border: solid black 2px;
-    height: 200px;
+    flex-direction:row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    border: solid rgba(173, 132, 132) 3px;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 90%;
+    height: 30vh;
     border-radius: 10px;
-    box-shadow: 6px 6px 20px -7px rgba(0,0,0,0.54);
+    box-shadow: 6px 6px 20px -7px rgba(126, 10, 10, 0.54);
 }
 
+
+.picture {
+    width: 100%;
+    height: 60%;
+    border-radius: 10px 10px 0 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .otherInfo {
+    margin: 0 0 10px 10px;
+  }

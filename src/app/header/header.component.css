@@ -5,9 +5,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1 {
     margin: 0;
     margin-bottom: 5px;
+}
+
+.font{
+    font-family: 'Satisfy', cursive;
+    color:rgba(173, 132, 132, 0.815);
+}
+
+a:link, a:visited {
+    color:rgba(173, 132, 132);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(173, 132, 132, 0.342);
 }
