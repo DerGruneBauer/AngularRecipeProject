@@ -12,15 +12,16 @@ export class FavoritesPageComponent implements OnInit {
   constructor(
     private RecipeServiceService: RecipeServiceService,
     private favoritesService: FavoritesService
-  ) {}
+  ) { }
 
   ngOnInit(): void {
-   
+
   }
 
   //this keyword below "get" will allow us to call this function which will allow us to return all of the favorites stored in the array. 
   //now in our html we can simply say "let item of favorites" and it will automatically call this and retun the array/each item in it. 
-  get favorites(){
+  get favorites() {
     return this.favoritesService.getFavorites();
   }
+
 }
