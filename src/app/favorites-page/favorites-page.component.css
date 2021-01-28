@@ -1,0 +1,13 @@
+.favorites-container {
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+.picture {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px 10px 0 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

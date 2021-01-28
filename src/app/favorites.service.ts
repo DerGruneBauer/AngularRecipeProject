@@ -18,6 +18,7 @@ export class FavoritesService {
   //It will push that recipe into the array we declared above on this favorties service page. (favorites: any[] = [])
   addFavorite(recipe: object) {
     this.favorites.push(recipe);
+    console.log(this.favorites);
     return this;
   }
 
