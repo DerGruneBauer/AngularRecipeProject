@@ -43,6 +43,10 @@ export class SearchCriteriaComponent implements OnInit {
       }
     );
   }
+  
+  getSearchItems(){
+    return this.searchItems;
+  }
 
   //For Delia. Start with importing favorites service page at top of page. Services also need to be added to the constructor area above if you
   //plan to use them to grab and pass information between components.
