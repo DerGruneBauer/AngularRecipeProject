@@ -16,6 +16,9 @@ export class RecipesListComponent implements OnInit {
 
   constructor(private RecipeServiceService: RecipeServiceService) { }
 
+  initialSearchItems: any;
+  searchItems = [];
+
   ngOnInit(): void {
 
     this.RecipeServiceService.ApiCall()
