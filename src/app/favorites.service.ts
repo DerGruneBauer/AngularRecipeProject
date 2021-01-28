@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
 })
 export class FavoritesService {
   //declare favorites array
-  private favorites: any[] = [];
+  public favorites: any[] = [];
 
-  constructor() {}
+  constructor() { }
 
   //return array of favorites
   getFavorites(): any[] {
@@ -19,5 +19,18 @@ export class FavoritesService {
   addFavorite(recipe: object) {
     this.favorites.push(recipe);
     return this;
+  }
+
+  contains(recipe: object): boolean {
+    return this.favorites.includes(recipe);
+  }
+
+  removeFavorite(recipe: object) {
+    let index: number = this.favorites.findIndex(
+      (element) => element === recipe
+    );
+    console.log(index);
+    this.favorites.splice(index, 1);
+    return this.favorites;
   }
 }

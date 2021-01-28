@@ -1,30 +1,18 @@
-<!-- this will go on each recipe that shows after search -->
-<!-- solid heart -->
-<i class="fas fa-heart" style="color: red"></i>
-<!-- open heart -->
-<i class="far fa-heart"></i>
-
-<!--this goes in the
-<head>
-  <script
-    src="https://kit.fontawesome.com/6e4b0d82b5.js"
-    crossorigin="anonymous"
-  ></script>
-</head>
--->
-
 <div class="favorites-container">
   <div class="favorites"></div>
-  <!-- <div *ngIf="favoriteRecipes.length === 0">No Favorites Yet!</div> -->
+  <div *ngIf="favorites.length === 0">No Favorites Yet!</div>
   <div class="favorite-recipes-container">
-    
-
     <!-- For Delia. Created a div here that will now take our favorites array from the get method in our 'favorites-page.ts' 
     and iterate through all of the items in it. -->
-    <div class="individualFavoriteRecipe" *ngFor = "let item of favorites; let i=index;">
-      <div class="name">{{ this.favorites[i].recipe.label }}</div>
+    <div
+      class="individualFavoriteRecipe"
+      *ngFor="let item of favorites; let i = index"
+    >
+      <div
+        class="picture"
+        [style.background-image]="'url(' + favorites[i].recipe.image + ')'"
+      ></div>
+      <div class="name">{{ favorites[i].recipe.label }}</div>
     </div>
-
-    <!-- put each favorited recipe in here -->
   </div>
 </div>
