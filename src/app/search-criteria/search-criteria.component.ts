@@ -24,6 +24,7 @@ export class SearchCriteriaComponent implements OnInit {
     let query = document.querySelector('input').value;
     this.RecipeServiceService.getSearchResults(query).subscribe((data) => {
       this.initialSearchItems = data;
+      console.log(data)
       this.searchItems = this.initialSearchItems.hits;
   });
 }

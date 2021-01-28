@@ -1,24 +1,39 @@
+
 .searchWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100vw;
-    height: 83vh;
+    height: 84vh;
 }
 
-.searchW {
-    color: rgba(56, 54, 54, 0.75);
+
+span {
+    color: black;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Satisfy', cursive;
 }
-.emptyMessage {
-    margin-top: 30px;
-    font-size: 20px;
-    text-align: center;
-    color: rgba(255, 255, 255, 0.75);
+
+.titleAndInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30%;
+    background-color: rgba(255, 255, 255, 0.9);
 }
+
 
 /* Input and Buttons for Searching */
 .searchFunction{
     display: flex;
+    margin-top: 20px;
+    /* justify-content: center;
+    align-items: center; */
+
 }
 
 input {
@@ -60,15 +75,17 @@ button:hover {
     height: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    overflow-y: scroll;
+    overflow-y: auto;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
 .searchItem {
-    margin: 30px 20px 30px 20px;
+    margin: 30px 20px 0 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: solid black 2px;
+    background-color: whitesmoke;
+    border: solid darkslategray 2px;
     height: 200px;
     border-radius: 10px;
     box-shadow: 6px 6px 20px -7px rgba(0,0,0,0.54);
@@ -101,3 +118,9 @@ button:hover {
      height: 70%;
      width: 50%
  }
+
+ @media only screen and (max-width: 450px) {
+    input {
+        width: 200px;
+    }
+  }

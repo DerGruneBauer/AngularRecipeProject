@@ -23,4 +23,5 @@ export class FavoritesPageComponent implements OnInit {
   get favorites(){
     return this.favoritesService.getFavorites();
   }
+
 }

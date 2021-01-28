@@ -1,5 +1,6 @@
 <div class="searchWrapper">
-  <h1 class="searchW">Search For Recipes</h1>
+  <div class="titleAndInput">
+  <span *ngIf = "searchItems.length == 0">Search For Something Below</span>
   <div class="searchFunction">
     <button class="browseButton" (click)="showBrowseForm = !showBrowseForm">Browse</button>
     <input
@@ -9,11 +10,9 @@
     /><button class="submitButton" (click)="searchRecipes()">Submit</button
     >
   </div>
+</div>
   <app-browse-feature *ngIf="showBrowseForm" (find)="dietSearchRecipes($event)" (findHealth)="healthSearchRecipes($event)"></app-browse-feature>
-  <div class="emptyMessage" *ngIf="searchItems.length < 1">
-    Search for something above or click on the browse button to view additional options
-  </div>
-  <div class="searchItemsWrapper">
+  <div class="searchItemsWrapper" *ngIf = "searchItems.length >= 1">
     <div class="searchItem" *ngFor="let item of searchItems; let i = index">
       <div
         class="picture"
