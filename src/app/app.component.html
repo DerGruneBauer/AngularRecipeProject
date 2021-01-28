@@ -1,19 +1,6 @@
-<head>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Special+Elite&display=swap" rel="stylesheet">
-</head>
-<div class="navAndHeader">
-  <h1 class="font">Group 4 Recipe Website!</h1>
-  <a routerLink="/search">Home</a> •
-  <a routerLink="/favorites">Favorites</a> •
-  <a routerLink="/recipeList">Recipe List</a> •
-  <a routerLink="/about">About Us</a> <br>
-  <img
-      src="/assets/chefbackground.jpg"
-      alt="Chef Cutting"
-      class="chefCutting"
-    />
+
+<div class="chefCutting">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
 </div>
-<router-outlet></router-outlet>
-
-
