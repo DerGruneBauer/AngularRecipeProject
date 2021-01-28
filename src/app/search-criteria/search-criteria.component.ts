@@ -23,6 +23,7 @@ export class SearchCriteriaComponent implements OnInit {
     let query = document.querySelector('input').value;
     this.RecipeServiceService.getSearchResults(query).subscribe((data) => {
       this.initialSearchItems = data;
+      console.log(data)
       this.searchItems = this.initialSearchItems.hits;
     });
   }
@@ -41,6 +42,10 @@ export class SearchCriteriaComponent implements OnInit {
         this.searchItems = this.initialSearchItems.hits;
       }
     );
+  }
+  
+  getSearchItems(){
+    return this.searchItems;
   }
 
   //For Delia. Start with importing favorites service page at top of page. Services also need to be added to the constructor area above if you
