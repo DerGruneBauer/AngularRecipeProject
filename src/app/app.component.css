@@ -3,9 +3,24 @@
     background-color: rgba(255, 255, 255, 0.75);
     padding-bottom: 10px;
     height: 12vh;
-}
+    color:rgba(218, 192, 192, 0.815);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 
+}
+.font{
+    font-family: 'Great Vibes', cursive;
+    color:rgba(218, 192, 192, 0.815);
+}
 .chefCutting {
     display: flex;
     width: 100%;
+}
+
+a:link, a:visited {
+    color: rgba(218, 192, 192);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(133, 180, 127);
 }
