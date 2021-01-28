@@ -2,14 +2,16 @@
   <div class="titleAndInput">
   <span *ngIf = "searchItems.length == 0">Search For Something Below</span>
   <div class="searchFunction">
-    <button class="browseButton" (click)="showBrowseForm = !showBrowseForm">Browse</button>
+    <button class="browseButton" (click)="showBrowseForm = !showBrowseForm">
+      Browse
+    </button>
     <input
       type="text/css"
       placeholder="Ex.'Vegetarian' or 'Carrots'"
       (keyup.enter)="searchRecipes()"
-    /><button class="submitButton" (click)="searchRecipes()">Submit</button
-    >
+    /><button class="submitButton" (click)="searchRecipes()">Submit</button>
   </div>
+
 </div>
   <app-browse-feature *ngIf="showBrowseForm" (find)="dietSearchRecipes($event)" (findHealth)="healthSearchRecipes($event)"></app-browse-feature>
   <div class="searchItemsWrapper" *ngIf = "searchItems.length >= 1">
@@ -36,11 +38,18 @@
         </div>
       </div> -->
 
-
       <!--button below to allow user to favorite a recipe. Is created with each iteration of the ngFor loop, so seperate button for each recipe
       easily allows us to grab the corresponding index/item and pass it into the function below-->
-      <button (click)="addToFavorites(this.searchItems[i])">Favorite</button>
-
+      <button (click)="addOrRemoveFavorite(this.searchItems[i])">
+        <i
+          class="fas fa-heart"
+          [ngClass]="{
+            red: favoriteService.contains(this.searchItems[i]),
+            gray: !favoriteService.contains(this.searchItems[i])
+          }"
+        ></i>
+        Favorite
+      </button>
     </div>
   </div>
 </div>
