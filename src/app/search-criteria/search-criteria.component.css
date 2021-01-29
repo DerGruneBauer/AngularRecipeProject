@@ -137,19 +137,13 @@ button:hover {
   color: red;
 }
 
-.chef {
-  display: flex;
-  height: 70%;
-  width: 50%;
-}
-
 @media only screen and (max-width: 450px) {
-  /* input {
+  input {
         width: 200px;
         max-width: 480px;
         margin: auto;
     }
-  } */
+  
 
   .searchWrapper {
     display: flex;
@@ -179,12 +173,12 @@ button:hover {
 
   /* Input and Buttons for Searching */
 
-  .searchFunction {
+   .searchFunction {
     display: flex;
-    margin-top: 20px;
+    margin-top: 20px; 
     /* justify-content: center;
     align-items: center; */
-  }
+   }
 
   input {
     border: solid rgba(173, 132, 132) 2px;
@@ -245,10 +239,10 @@ button:hover {
   }
   .searchItem:hover {
     cursor: pointer;
-  }
+  } 
 
   /* Inside Searched Item */
-  .picture {
+   .picture {
     width: 100%;
     height: 60%;
     border-radius: 10px 10px 0 0;
@@ -284,4 +278,4 @@ button:hover {
     height: 70%;
     width: 50%;
   }
-}
+} 
