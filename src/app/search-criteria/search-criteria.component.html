@@ -14,7 +14,7 @@
 </div>
   <app-browse-feature *ngIf="showBrowseForm" (find)="dietSearchRecipes($event)" (findHealth)="healthSearchRecipes($event)"></app-browse-feature>
   <div class="searchItemsWrapper" *ngIf = "searchItems.length >= 1">
-    <div class="searchItem" *ngFor="let item of searchItems; let i = index">
+    <div class="searchItem" (click)="openPopUp(searchItems[i])" (click)="showPopUp = !showPopUp" *ngFor="let item of searchItems; let i = index">
       <div
         class="picture"
         [style.background-image]="
@@ -37,8 +37,6 @@
         </div>
       </div> -->
 
-      <!--button below to allow user to favorite a recipe. Is created with each iteration of the ngFor loop, so seperate button for each recipe
-      easily allows us to grab the corresponding index/item and pass it into the function below-->
       <button (click)="addOrRemoveFavorite(this.searchItems[i])">
         <i
           class="fas fa-heart"
@@ -50,5 +48,5 @@
         Favorite
       </button>
     </div>
-  </div>
+    <app-recipe-popup *ngIf="showPopUp" (closeEvent)="closePopUp()"></app-recipe-popup>
 </div>

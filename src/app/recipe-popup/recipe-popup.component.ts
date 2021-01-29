@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { RecipeServiceService } from '../recipe-service.service';
+import { SearchCriteriaComponent } from '../search-criteria/search-criteria.component';
 
 @Component({
   selector: 'app-recipe-popup',
@@ -6,13 +8,18 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./recipe-popup.component.css'],
 })
 export class RecipePopupComponent implements OnInit {
-  @Input() hit: any;
   @Output() closeEvent = new EventEmitter<void>();
-  constructor() {}
+  constructor(private RecipeServiceService: RecipeServiceService ) {}
 
   ngOnInit(): void {}
 
   closePopup = () => {
     this.closeEvent.emit();
   };
+
+  get popUpInfo() {
+    return this.RecipeServiceService.getPopUpInfo();
+  }
+
+
 }
