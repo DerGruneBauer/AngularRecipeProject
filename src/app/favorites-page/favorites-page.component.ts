@@ -14,6 +14,7 @@ export class FavoritesPageComponent implements OnInit {
     private favoritesService: FavoritesService
   ) { }
 
+  showPopUp: boolean = false;
   ngOnInit(): void {
 
   }

@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchCriteriaComponent } from './search-criteria/search-criteria.component';
 import { FavoritesPageComponent } from './favorites-page/favorites-page.component';
-import { RecipesListComponent } from './recipes-list/recipes-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowseFeatureComponent } from './browse-feature/browse-feature.component';
 import { AboutComponent } from './about/about.component';
@@ -19,7 +18,6 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     SearchCriteriaComponent,
     FavoritesPageComponent,
-    RecipesListComponent,
     BrowseFeatureComponent,
     AboutComponent,
     RecipePopupComponent,
