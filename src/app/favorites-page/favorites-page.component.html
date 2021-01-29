@@ -1,15 +1,10 @@
 <div class="wrapper">
-<div class="favoriteWrapper">
-  <div class="no-favorites" *ngIf="favorites.length === 0">
-    <div class="noFav">No Favorites Yet!</div>
+  <div class="favoriteWrapper">
+    <div class="no-favorites" *ngIf="favorites.length === 0">
+      <div class="noFav">No Favorites Yet!</div>
+    </div>
   </div>
-</div>
-<div class="favorite-recipes-container" *ngIf="favorites.length >= 1">
-  <div
-    class="individualFavoriteRecipe"
-    *ngFor="let item of favorites; let i = index"
-    (click)="showPopUp = !showPopUp"
-  >
+  <div class="favorite-recipes-container" *ngIf="favorites.length >= 1">
     <div
       class="individualFavoriteRecipe"
       *ngFor="let item of favorites; let i = index"
@@ -31,9 +26,4 @@
       (closeEvent)="closePopUp()"
     ></app-recipe-popup>
   </div>
-  <app-recipe-popup
-    *ngIf="showPopUp"
-    (closeEvent)="closePopUp()"
-  ></app-recipe-popup>
-</div>
 </div>
