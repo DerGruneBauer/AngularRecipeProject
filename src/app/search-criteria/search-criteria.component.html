@@ -12,12 +12,10 @@
       /><button class="submitButton" (click)="searchRecipes()">Submit</button>
     </div>
   </div>
-</div>
-<app-browse-feature
+  <app-browse-feature
   *ngIf="showBrowseForm"
   (find)="dietSearchRecipes($event)"
-  (findHealth)="healthSearchRecipes($event)"
-></app-browse-feature>
+  (findHealth)="healthSearchRecipes($event)"></app-browse-feature>
 <div class="searchItemsWrapper" *ngIf="searchItems.length >= 1">
   <div
     class="searchItem"
@@ -31,19 +29,6 @@
     ></div>
     <div class="title">{{ this.searchItems[i].recipe.label }}</div>
 
-    <!-- <div class="otherInfo">
-        <div class="calories">
-          <strong>Total Calories: </strong
-          >{{ this.searchItems[i].recipe.calories | number: "1.0-0" }} 
-        </div>
-        <div class="time">
-          <strong>Time to Make: </strong
-          >{{ this.searchItems[i].recipe.totalTime }} Minutes
-        </div>
-        <div class="servings">
-          <strong>Servings: </strong>{{ this.searchItems[i].recipe.yield }}
-        </div>
-      </div> -->
     <div class="heart-container">
       <button class="heart" (click)="addOrRemoveFavorite(this.searchItems[i])">
         <i
@@ -61,4 +46,5 @@
     *ngIf="showPopUp"
     (closeEvent)="closePopUp()"
   ></app-recipe-popup>
+</div>
 </div>
