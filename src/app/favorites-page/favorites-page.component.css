@@ -53,9 +53,15 @@
   font-weight: bold;
 }
 
+.trash-container {
+  position: relative;
+}
 .trash {
   border: none;
   margin: auto;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
 }
 .fa-trash {
   color: gray;

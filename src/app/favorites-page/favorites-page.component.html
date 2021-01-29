@@ -14,9 +14,11 @@
         [style.background-image]="'url(' + favorites[i].recipe.image + ')'"
       ></div>
       <div class="name">{{ favorites[i].recipe.label }}</div>
-      <button class="trash" (click)="removeFavorite(i)">
-        <i class="fas fa-trash"></i>
-      </button>
+      <div class="trash-container">
+        <button class="trash" (click)="removeFavorite(i)">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
     </div>
   </div>
 </div>
