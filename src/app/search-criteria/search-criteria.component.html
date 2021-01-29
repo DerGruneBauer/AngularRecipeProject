@@ -12,12 +12,12 @@
       /><button class="submitButton" (click)="searchRecipes()">Submit</button>
     </div>
   </div>
+  <app-browse-feature
+    *ngIf="showBrowseForm"
+    (find)="dietSearchRecipes($event)"
+    (findHealth)="healthSearchRecipes($event)"
+  ></app-browse-feature>
 </div>
-<app-browse-feature
-  *ngIf="showBrowseForm"
-  (find)="dietSearchRecipes($event)"
-  (findHealth)="healthSearchRecipes($event)"
-></app-browse-feature>
 <div class="searchItemsWrapper" *ngIf="searchItems.length >= 1">
   <div
     class="searchItem"
@@ -45,7 +45,10 @@
         </div>
       </div> -->
     <div class="heart-container">
-      <button class="heart" (click)="addOrRemoveFavorite(this.searchItems[i])">
+      <button
+        class="heart"
+        (click)="addOrRemoveFavorite(this.searchItems[i], i)"
+      >
         <i
           class="fas fa-heart"
           [ngClass]="{

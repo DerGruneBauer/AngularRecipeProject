@@ -44,17 +44,17 @@ export class SearchCriteriaComponent implements OnInit {
       }
     );
   }
-  
-  getSearchItems(){
+
+  getSearchItems() {
     return this.searchItems;
   }
 
-  openPopUp(item: object){
-   this.RecipeServiceService.addRecipeInfo(item);
-   console.log(item);
+  openPopUp(item: object) {
+    this.RecipeServiceService.addRecipeInfo(item);
+    console.log(item);
   }
 
-  closePopUp(){
+  closePopUp() {
     this.showPopUp = false;
   }
 
@@ -75,9 +75,9 @@ export class SearchCriteriaComponent implements OnInit {
   //   return color;
   // }
 
-  addOrRemoveFavorite(recipe: object) {
+  addOrRemoveFavorite(recipe: object, index: number) {
     if (this.favoriteService.favorites.includes(recipe)) {
-      this.favoriteService.removeFavorite(recipe);
+      this.favoriteService.removeFavorite(index);
     } else {
       this.favoriteService.addFavorite(recipe);
     }

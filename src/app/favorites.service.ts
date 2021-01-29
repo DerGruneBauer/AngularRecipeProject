@@ -26,11 +26,7 @@ export class FavoritesService {
     return this.favorites.includes(recipe);
   }
 
-  removeFavorite(recipe: object) {
-    let index: number = this.favorites.findIndex(
-      (element) => element === recipe
-    );
-    console.log(index);
+  removeFavorite(index: number) {
     this.favorites.splice(index, 1);
     return this.favorites;
   }
