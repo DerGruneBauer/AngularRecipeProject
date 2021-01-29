@@ -28,7 +28,7 @@
 }
 
 .photo {
-    border: solid 1px black;
+    border: solid 1px rgba(173, 132, 132);
     height: 175px;
     width: 175px;
     border-radius: 50%;
@@ -49,6 +49,14 @@ a {
     margin-bottom: 5px;
 }
 
+a:link, a:visited {
+    color:rgba(173, 132, 132);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgba(173, 132, 132, 0.342);
+}
 @media only screen and (max-width: 900px) {
     .aboutWrapper {
         height: 80%;
