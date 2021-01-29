@@ -24,4 +24,8 @@ export class FavoritesPageComponent implements OnInit {
     return this.favoritesService.getFavorites();
   }
 
+  removeFavorite(index) {
+    return this.favoritesService.favorites.splice(index, 1);
+  }
+
 }
