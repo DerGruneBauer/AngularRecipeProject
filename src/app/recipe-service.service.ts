@@ -9,6 +9,8 @@ export class RecipeServiceService {
 
   constructor(private httpClient: HttpClient) { }
 
+  recipeInfo = [];
+
   ApiId: string = '1969a411';
   ApiKey: string = '720b7458df1ca9dafe9916c7b299aa0f';
   ApiUrl: string = `https://api.edamam.com/search?q=rice&app_id=${this.ApiId}&app_key=${this.ApiKey}`;
@@ -34,6 +36,18 @@ export class RecipeServiceService {
      return this.httpClient.get(searchUrl)
    }
 
+   addRecipeInfo(recipe: object){
+    this.recipeInfo.push(recipe);
+       if (this.recipeInfo.length > 1){
+         this.recipeInfo.splice(0, 1);
+         return this;
+       } else {
+         return this;
+       }
+   }
 
+  getPopUpInfo(){
+    return this.recipeInfo;
+  }
 
 }

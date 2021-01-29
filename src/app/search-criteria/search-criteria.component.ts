@@ -16,6 +16,7 @@ export class SearchCriteriaComponent implements OnInit {
   initialSearchItems: any;
   searchItems = [];
   showBrowseForm: boolean = false;
+  showPopUp: boolean = false;
 
   ngOnInit(): void { }
 
@@ -46,6 +47,15 @@ export class SearchCriteriaComponent implements OnInit {
   
   getSearchItems(){
     return this.searchItems;
+  }
+
+  openPopUp(item: object){
+   this.RecipeServiceService.addRecipeInfo(item);
+   console.log(item);
+  }
+
+  closePopUp(){
+    this.showPopUp = false;
   }
 
   //For Delia. Start with importing favorites service page at top of page. Services also need to be added to the constructor area above if you
