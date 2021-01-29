@@ -1,26 +1,29 @@
-<div class="favorites-container">
+<div class="wrapper">
+<div class="favoriteWrapper">
   <div class="no-favorites" *ngIf="favorites.length === 0">
-    No Favorites Yet!
+    <div class="noFav">No Favorites Yet!</div>
   </div>
-  <div class="favorite-recipes-container">
-    <!-- For Delia. Created a div here that will now take our favorites array from the get method in our 'favorites-page.ts' 
-    and iterate through all of the items in it. -->
+</div>
+<div class="favorite-recipes-container" *ngIf="favorites.length >= 1">
+  <div
+    class="individualFavoriteRecipe"
+    *ngFor="let item of favorites; let i = index"
+    (click)="showPopUp = !showPopUp"
+  >
     <div
-      class="individualFavoriteRecipe"
-      *ngFor="let item of favorites; let i = index"
-      (click)="showPopUp = !showPopUp"
-    >
-      <div
-        class="picture"
-        [style.background-image]="'url(' + favorites[i].recipe.image + ')'"
-      ></div>
-      <div class="name">{{ favorites[i].recipe.label }}</div>
-      <div class="trash-container">
-        <button class="trash" (click)="removeFavorite(i)">
-          <i class="fas fa-trash"></i>
-        </button>
-      </div>
+      class="picture"
+      [style.background-image]="'url(' + favorites[i].recipe.image + ')'"
+    ></div>
+    <div class="name">{{ favorites[i].recipe.label }}</div>
+    <div class="trash-container">
+      <button class="trash" (click)="removeFavorite(i)">
+        <i class="fas fa-trash"></i>
+      </button>
     </div>
-    <app-recipe-popup *ngIf="showPopUp" (closeEvent)="closePopUp()"></app-recipe-popup>
   </div>
+  <app-recipe-popup
+    *ngIf="showPopUp"
+    (closeEvent)="closePopUp()"
+  ></app-recipe-popup>
+</div>
 </div>
