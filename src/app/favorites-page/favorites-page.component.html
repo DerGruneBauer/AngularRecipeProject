@@ -11,15 +11,25 @@
     (click)="showPopUp = !showPopUp"
   >
     <div
-      class="picture"
-      [style.background-image]="'url(' + favorites[i].recipe.image + ')'"
-    ></div>
-    <div class="name">{{ favorites[i].recipe.label }}</div>
-    <div class="trash-container">
-      <button class="trash" (click)="removeFavorite(i)">
-        <i class="fas fa-trash"></i>
-      </button>
+      class="individualFavoriteRecipe"
+      *ngFor="let item of favorites; let i = index"
+      (click)="showPopUp = !showPopUp"
+    >
+      <div
+        class="picture"
+        [style.background-image]="'url(' + favorites[i].recipe.image + ')'"
+      ></div>
+      <div class="name">{{ favorites[i].recipe.label }}</div>
+      <div class="trash-container">
+        <button class="trash" (click)="removeFavorite(i)">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
     </div>
+    <app-recipe-popup
+      *ngIf="showPopUp"
+      (closeEvent)="closePopUp()"
+    ></app-recipe-popup>
   </div>
   <app-recipe-popup
     *ngIf="showPopUp"

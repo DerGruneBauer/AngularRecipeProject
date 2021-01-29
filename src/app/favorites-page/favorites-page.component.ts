@@ -29,4 +29,7 @@ export class FavoritesPageComponent implements OnInit {
     return this.favoritesService.favorites.splice(index, 1);
   }
 
+  closePopUp() {
+    this.showPopUp = false;
+  }
 }
