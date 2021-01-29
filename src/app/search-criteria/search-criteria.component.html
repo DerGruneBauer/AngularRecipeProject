@@ -12,20 +12,26 @@
       /><button class="submitButton" (click)="searchRecipes()">Submit</button>
     </div>
   </div>
-
 </div>
-  <app-browse-feature *ngIf="showBrowseForm" (find)="dietSearchRecipes($event)" (findHealth)="healthSearchRecipes($event)"></app-browse-feature>
-  <div class="searchItemsWrapper" *ngIf = "searchItems.length >= 1">
-    <div class="searchItem" (click)="openPopUp(searchItems[i])" (click)="showPopUp = !showPopUp" *ngFor="let item of searchItems; let i = index">
-      <div
-        class="picture"
-        [style.background-image]="
-          'url(' + this.searchItems[i].recipe.image + ')'
-        "
-      ></div>
-      <div class="title">{{ this.searchItems[i].recipe.label }}</div>
+<app-browse-feature
+  *ngIf="showBrowseForm"
+  (find)="dietSearchRecipes($event)"
+  (findHealth)="healthSearchRecipes($event)"
+></app-browse-feature>
+<div class="searchItemsWrapper" *ngIf="searchItems.length >= 1">
+  <div
+    class="searchItem"
+    (click)="openPopUp(searchItems[i])"
+    (click)="showPopUp = !showPopUp"
+    *ngFor="let item of searchItems; let i = index"
+  >
+    <div
+      class="picture"
+      [style.background-image]="'url(' + this.searchItems[i].recipe.image + ')'"
+    ></div>
+    <div class="title">{{ this.searchItems[i].recipe.label }}</div>
 
-      <!-- <div class="otherInfo">
+    <!-- <div class="otherInfo">
         <div class="calories">
           <strong>Total Calories: </strong
           >{{ this.searchItems[i].recipe.calories | number: "1.0-0" }} 
@@ -38,8 +44,8 @@
           <strong>Servings: </strong>{{ this.searchItems[i].recipe.yield }}
         </div>
       </div> -->
-
-      <button (click)="addOrRemoveFavorite(this.searchItems[i])">
+    <div class="heart-container">
+      <button class="heart" (click)="addOrRemoveFavorite(this.searchItems[i])">
         <i
           class="fas fa-heart"
           [ngClass]="{
@@ -49,7 +55,10 @@
         ></i>
       </button>
     </div>
+  </div>
 
-    <app-recipe-popup *ngIf="showPopUp" (closeEvent)="closePopUp()"></app-recipe-popup>
-
+  <app-recipe-popup
+    *ngIf="showPopUp"
+    (closeEvent)="closePopUp()"
+  ></app-recipe-popup>
 </div>
