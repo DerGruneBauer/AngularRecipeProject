@@ -1,0 +1,71 @@
+.favorites-container {
+}
+
+.no-favorites {
+  font-size: 2rem;
+  font-family: "Satisfy", cursive;
+  color: rgba(98, 76, 76, 0.815);
+  text-align: center;
+  margin: 10px 20px 0 0px;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.favorite-recipes-container {
+  margin: 10px 20px 0 20px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.individualFavoriteRecipe {
+  margin: 30px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  border: solid rgba(173, 132, 132) 3px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 20px -7px rgba(0, 0, 0, 0.54);
+}
+
+.individualFavoriteRecipe:hover {
+  cursor: pointer;
+}
+
+.picture {
+  width: 100%;
+  height: 60%;
+  border-radius: 10px 10px 0 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.name {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.trash-container {
+  position: relative;
+}
+.trash {
+  border: none;
+  margin: auto;
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+}
+.fa-trash {
+  color: gray;
+}
+.fa-trash:hover {
+  color: black;
+}

@@ -1,16 +1,18 @@
 <div class="searchWrapper">
   <div class="titleAndInput">
-  <span *ngIf = "searchItems.length == 0">Search For Something Below</span>
-  <div class="searchFunction">
-    <button class="browseButton" (click)="showBrowseForm = !showBrowseForm">
-      Browse
-    </button>
-    <input
-      type="text/css"
-      placeholder="Ex.'Vegetarian' or 'Carrots'"
-      (keyup.enter)="searchRecipes()"
-    /><button class="submitButton" (click)="searchRecipes()">Submit</button>
+    <span *ngIf="searchItems.length == 0">Search For Something Below</span>
+    <div class="searchFunction">
+      <button class="browseButton" (click)="showBrowseForm = !showBrowseForm">
+        Browse
+      </button>
+      <input
+        type="text/css"
+        placeholder="Ex.'Vegetarian' or 'Carrots'"
+        (keyup.enter)="searchRecipes()"
+      /><button class="submitButton" (click)="searchRecipes()">Submit</button>
+    </div>
   </div>
+
 </div>
   <app-browse-feature *ngIf="showBrowseForm" (find)="dietSearchRecipes($event)" (findHealth)="healthSearchRecipes($event)"></app-browse-feature>
   <div class="searchItemsWrapper" *ngIf = "searchItems.length >= 1">
@@ -45,8 +47,9 @@
             gray: !favoriteService.contains(this.searchItems[i])
           }"
         ></i>
-        Favorite
       </button>
     </div>
+
     <app-recipe-popup *ngIf="showPopUp" (closeEvent)="closePopUp()"></app-recipe-popup>
+
 </div>

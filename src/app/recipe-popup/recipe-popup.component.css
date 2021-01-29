@@ -10,9 +10,9 @@
   align-items: center;
 }
 .pop-up {
-  border: 5px solid #ffbc42;
+  border: 5px solid rgba(173, 132, 132);
   margin: 20px;
-  background-color: white;
+  background-color:rgba(255, 255, 255, 0.9);
   height: 400px;
   width: 350px;
   border-radius: 15px;
@@ -25,15 +25,22 @@
 
 .recipe-label {
   text-decoration: underline;
+  font-family: 'Satisfy', cursive;
+  color:rgba(173, 132, 132, 0.815);
+  align-items: center;
+  justify-content: center;
 }
 
 .ingredient-heading {
   font-size: 20px;
   font-style: italic;
+  font-family: 'Satisfy', cursive;
+  color:rgba(133, 80, 80, 0.815);
 }
 
 .ingredient-list {
   overflow: auto;
+  color:rgba(133, 80, 80, 0.815);
 }
 
 .button-container {
@@ -44,12 +51,21 @@
   text-align: center;
   width: 150px;
   height: 30px;
-  background-color: #d81159;
+  border: solid rgba(173, 132, 132) 2px;
+  background-color: rgba(173, 132, 132, 0.342);
   border-radius: 10px;
-  box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.75);
-  border: none;
-  color: #fff;
 }
 .close-button:hover {
   cursor: pointer;
+  background-color: rgba(173, 132, 132);
+  color:rgba(255, 255, 255, 0.9)
+}
+
+a:link, a:visited {
+  color:rgba(173, 132, 132);
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgba(173, 132, 132, 0.342);
 }
