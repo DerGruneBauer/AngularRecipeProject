@@ -12,18 +12,11 @@
       /><button class="submitButton" (click)="searchRecipes()">Submit</button>
     </div>
   </div>
-  <app-browse-feature
-    *ngIf="showBrowseForm"
-    (find)="dietSearchRecipes($event)"
-    (findHealth)="healthSearchRecipes($event)"
-  ></app-browse-feature>
-  <div class="searchItemsWrapper" *ngIf="searchItems.length >= 1">
-    <div
-      class="searchItem"
-      (click)="openPopUp(searchItems[i])"
-      (click)="showPopUp = !showPopUp"
-      *ngFor="let item of searchItems; let i = index"
-    >
+
+</div>
+  <app-browse-feature *ngIf="showBrowseForm" (find)="dietSearchRecipes($event)" (findHealth)="healthSearchRecipes($event)"></app-browse-feature>
+  <div class="searchItemsWrapper" *ngIf = "searchItems.length >= 1">
+    <div class="searchItem" (click)="openPopUp(searchItems[i])" (click)="showPopUp = !showPopUp" *ngFor="let item of searchItems; let i = index">
       <div
         class="picture"
         [style.background-image]="
@@ -56,9 +49,7 @@
         ></i>
       </button>
     </div>
-    <app-recipe-popup
-      *ngIf="showPopUp"
-      (closeEvent)="closePopUp()"
-    ></app-recipe-popup>
-  </div>
+
+    <app-recipe-popup *ngIf="showPopUp" (closeEvent)="closePopUp()"></app-recipe-popup>
+
 </div>
