@@ -14,6 +14,7 @@ export class FavoritesPageComponent implements OnInit {
     private favoritesService: FavoritesService
   ) { }
 
+  showPopUp: boolean = false;
   ngOnInit(): void {
 
   }
@@ -28,4 +29,7 @@ export class FavoritesPageComponent implements OnInit {
     return this.favoritesService.favorites.splice(index, 1);
   }
 
+  closePopUp() {
+    this.showPopUp = false;
+  }
 }
