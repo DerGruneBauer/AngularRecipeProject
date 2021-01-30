@@ -20,5 +20,6 @@ export class HeaderComponent implements OnInit {
   // get listItems(){
   //   return this.searchCriteria.getSearchItems();
   // }
-
 }
+  
+

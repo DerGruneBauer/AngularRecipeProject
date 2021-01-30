@@ -57,7 +57,7 @@ a:link, a:visited {
 a:hover {
     color: rgba(173, 132, 132, 0.342);
 }
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 768px) {
     .aboutWrapper {
         height: 80%;
         padding: 0 100px;
