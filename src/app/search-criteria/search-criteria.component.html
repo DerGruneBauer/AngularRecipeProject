@@ -13,38 +13,46 @@
     </div>
   </div>
   <app-browse-feature
-  *ngIf="showBrowseForm"
-  (find)="dietSearchRecipes($event)"
-  (findHealth)="healthSearchRecipes($event)"></app-browse-feature>
-<div class="searchItemsWrapper" *ngIf="searchItems.length >= 1">
-  <div
-    class="searchItem"
-    (click)="openPopUp(searchItems[i])"
-    (click)="showPopUp = !showPopUp"
-    *ngFor="let item of searchItems; let i = index"
-  >
+    *ngIf="showBrowseForm"
+    (find)="dietSearchRecipes($event)"
+    (findHealth)="healthSearchRecipes($event)"
+  ></app-browse-feature>
+  <div class="searchItemsWrapper" *ngIf="searchItems.length >= 1">
     <div
-      class="picture"
-      [style.background-image]="'url(' + this.searchItems[i].recipe.image + ')'"
-    ></div>
-    <div class="title">{{ this.searchItems[i].recipe.label }}</div>
+      class="searchItem"
+      (click)="openPopUp(searchItems[i])"
+      (click)="showPopUp = !showPopUp"
+      *ngFor="let item of searchItems; let i = index"
+    >
+      <div
+        class="picture"
+        [style.background-image]="
+          'url(' + this.searchItems[i].recipe.image + ')'
+        "
+      ></div>
+      <div class="title">{{ this.searchItems[i].recipe.label }}</div>
 
-    <div class="heart-container">
-      <button class="heart" (click)="addOrRemoveFavorite(this.searchItems[i])">
-        <i
-          class="fas fa-heart"
-          [ngClass]="{
-            red: favoriteService.contains(this.searchItems[i]),
-            gray: !favoriteService.contains(this.searchItems[i])
-          }"
-        ></i>
-      </button>
+      <div class="heart-container">
+        <button
+          class="heart"
+          (click)="
+            addOrRemoveFavorite(this.searchItems[i]); $event.stopPropagation()
+          "
+        >
+          <i
+            class="fas fa-heart"
+            [ngClass]="{
+              red: favoriteService.favorites.includes(this.searchItems[i]),
+              gray: !favoriteService.favorites.includes(this.searchItems[i])
+            }"
+          ></i>
+        </button>
+      </div>
     </div>
-  </div>
 
-  <app-recipe-popup
-    *ngIf="showPopUp"
-    (closeEvent)="closePopUp()"
-  ></app-recipe-popup>
-</div>
+    <app-recipe-popup
+      *ngIf="showPopUp"
+      (closeEvent)="closePopUp()"
+    ></app-recipe-popup>
+  </div>
 </div>

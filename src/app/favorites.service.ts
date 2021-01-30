@@ -22,9 +22,9 @@ export class FavoritesService {
     return this;
   }
 
-  contains(recipe: object): boolean {
-    return this.favorites.includes(recipe);
-  }
+  // contains(recipe: object): boolean {
+  //   return this.favorites.includes(recipe);
+  // }
 
   removeFavorite(recipe: object) {
     let index: number = this.favorites.findIndex(
