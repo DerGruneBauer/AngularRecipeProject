@@ -25,6 +25,7 @@ a:link, a:visited {
 
 a:hover {
     color: rgba(173, 132, 132, 0.342);
+    font-size: 18px;
 }
 
 @media only screen and ( max-width:768px) {
