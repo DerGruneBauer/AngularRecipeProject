@@ -1,5 +1,5 @@
 <div class="searchWrapper">
-  <div class="titleAndInput">
+  <div class="titleAndInput" [style.height] = "searchItems.length != 0 ? '10%' : '30%'">
     <span *ngIf="searchItems.length == 0">Search For Something Below</span>
     <div class="searchFunction">
       <button class="browseButton" (click)="showBrowseForm = !showBrowseForm">

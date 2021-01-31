@@ -30,18 +30,10 @@ a:hover {
 
 @media only screen and ( max-width:768px) {
     .navAndHeader {
-        text-align: center;
-        background-color: rgba(255, 255, 255, 0.75);
         height: 14vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        font-family:Verdana, Geneva, Tahoma, sans-serif;
         transition: ease all .5s;
     }
     h1 {
-        margin: 0;
-        margin-bottom: 5px;
         font-size: 30px;
         transition: ease all .5s;
     }

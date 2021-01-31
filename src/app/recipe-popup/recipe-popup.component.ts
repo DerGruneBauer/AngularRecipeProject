@@ -13,13 +13,12 @@ export class RecipePopupComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  closePopup = () => {
+  closePopUp = () => {
     this.closeEvent.emit();
   };
 
   get popUpInfo() {
     return this.RecipeServiceService.getPopUpInfo();
   }
-
 
 }

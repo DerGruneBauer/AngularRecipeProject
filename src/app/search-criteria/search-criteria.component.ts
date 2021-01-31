@@ -58,14 +58,6 @@ export class SearchCriteriaComponent implements OnInit {
     this.showPopUp = false;
   }
 
-  //For Delia. Start with importing favorites service page at top of page. Services also need to be added to the constructor area above if you
-  //plan to use them to grab and pass information between components.
-  //I first started by creating the function below and passing in the corresponding recipe in the html page. Console log to make sure it is
-  //correct when clicked on. Now we can pass that parameter/variable into our function which will send it over to the service page/method.
-  // addToFavorites(recipe: object) {
-  //   console.log(recipe);
-  //   this.favoriteService.addFavorite(recipe);
-  // }
 
   // heartColor(i) {
   //   const color = this.favoriteService.favorites.includes(this.searchItems[i]) ? 'red' : 'gray';
@@ -83,7 +75,4 @@ export class SearchCriteriaComponent implements OnInit {
     }
   }
 
-  // get favorites() {
-  //   return this.favoriteService.favorites;
-  // }
 }

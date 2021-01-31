@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 export class FavoritesService {
   //declare favorites array
   public favorites: any[] = [];
+  public favoritePopUp = [];
 
   constructor() { }
 
@@ -14,13 +15,24 @@ export class FavoritesService {
     return this.favorites;
   }
 
-  //This will take the recipe/object variable we sent over from the search criteria page and use it in this method
-  //It will push that recipe into the array we declared above on this favorties service page. (favorites: any[] = [])
   addFavorite(recipe: object) {
     this.favorites.push(recipe);
-    console.log(this.favorites);
     return this;
   }
+
+  addRecipeInfo(recipe: object){
+    this.favoritePopUp.push(recipe);
+       if (this.favoritePopUp.length > 1){
+         this.favoritePopUp.splice(0, 1);
+         return this;
+       } else {
+         return this;
+       }
+   }
+
+   getFavoritePop(){
+     return this.favoritePopUp;
+   }
 
   // contains(recipe: object): boolean {
   //   return this.favorites.includes(recipe);

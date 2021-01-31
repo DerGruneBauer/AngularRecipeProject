@@ -8,7 +8,8 @@
     <div
       class="individualFavoriteRecipe"
       *ngFor="let item of favorites; let i = index"
-      (click)="showPopUp = !showPopUp"
+      (click)="showFavPopUp = !showFavPopUp"
+      (click)="openPopUp(favorites[i])"
     >
       <div
         class="picture"
@@ -21,9 +22,9 @@
         </button>
       </div>
     </div>
-    <app-recipe-popup
-      *ngIf="showPopUp"
+    <app-favorite-pop-up
+      *ngIf="showFavPopUp"
       (closeEvent)="closePopUp()"
-    ></app-recipe-popup>
+    ></app-favorite-pop-up>
   </div>
 </div>

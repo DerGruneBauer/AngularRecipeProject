@@ -1,11 +1,11 @@
 <div class="popup-container">
     <div class="pop-up">
-      <h1 class="recipe-label">{{ popUpInfo[0].recipe.label }}</h1>
-      <a href="{{ popUpInfo[0].recipe.url }}">Click here for recipe!</a>
+      <h1 class="recipe-label">{{ favoritePopUp[0].recipe.label }}</h1>
+      <a href="{{ favoritePopUp[0].recipe.url }}">Click here for recipe!</a>
       <p class="ingredient-heading">Ingredients you'll need...</p>
       <ul class="ingredient-list">
-        <li *ngFor="let item of popUpInfo[0].recipe.ingredients; let i = index">
-          <p>{{ popUpInfo[0].recipe.ingredients[i].text }}</p>
+        <li *ngFor="let item of favoritePopUp[0].recipe.ingredients; let i = index">
+          <p>{{ favoritePopUp[0].recipe.ingredients[i].text }}</p>
         </li>
       </ul>
       <div class="button-container">

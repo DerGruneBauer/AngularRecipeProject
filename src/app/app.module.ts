@@ -11,7 +11,7 @@ import { AboutComponent } from './about/about.component';
 import { RecipePopupComponent } from './recipe-popup/recipe-popup.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { HomeComponent } from './home/home.component';
+import { FavoritePopUpComponent } from './favorite-pop-up/favorite-pop-up.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +23,7 @@ import { HomeComponent } from './home/home.component';
     RecipePopupComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent
+    FavoritePopUpComponent,
   ],
   imports: [
     BrowserModule,
