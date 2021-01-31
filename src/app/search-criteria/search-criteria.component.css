@@ -136,9 +136,11 @@ button:hover {
   position: absolute;
   bottom: 2px;
   right: 2px;
+  background-color: whitesmoke;
 }
 .heart:hover {
   background-color: whitesmoke;
+  color: red;
 }
 .gray {
   color: gray;

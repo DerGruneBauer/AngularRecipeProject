@@ -3,7 +3,7 @@
     background-color: rgba(255, 255, 255, 1);
     border: solid rgba(173, 132, 132) 3px;
     margin: 5px auto;
-   width: 500px;
+   width: 520px;
     border-radius: 5px;
     position: absolute;
     z-index: 10;
@@ -16,14 +16,51 @@
     flex-direction: column;
     margin: 20px;
     font-size: 17px;
+    color:rgba(29, 3, 3, 0.815);
 }
 
+.peanut:hover {
+    color:rgba(173, 132, 132, 0.342);
+    font-size: 17.5px;
+}
+.tree:hover {
+    color:rgba(173, 132, 132, 0.342);
+    font-size: 17.5px;
+}
+.alcohol:hover {
+    color:rgba(173, 132, 132, 0.342);
+    font-size: 17.5px;
+}
+.balanced:hover {
+    color:rgba(173, 132, 132, 0.342);
+    font-size: 17.5px;
+}
+.protein:hover {
+    color:rgba(173, 132, 132, 0.342);
+    font-size: 17.5px;
+}
+.carb:hover {
+    color:rgba(173, 132, 132, 0.342);
+    font-size: 17.5px;
+}
+.sugar:hover {
+    color:rgba(173, 132, 132, 0.342);
+    font-size: 17.5px;
+}
+.vegan:hover {
+    color: rgba(173, 132, 132, 0.342);
+    font-size: 17.5px;
+}
+.veg:hover {
+    color:rgba(173, 132, 132, 0.342);
+    font-size: 17.5px;
+}
 a {
     margin: 5px;
 }
 
 .title {
-    border-bottom: solid 1px lightgray;
+    border-bottom: solid 1px rgba(173, 132, 132, 0.815);
     font-weight: bold;
     font-size: 20px;
 }
