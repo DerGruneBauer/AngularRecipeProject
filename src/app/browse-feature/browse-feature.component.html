@@ -1,20 +1,20 @@
 <div class="browseWrapper">
     <div class="dietType">
         <div class="title">Diet Types</div>
-        <a (click)="findRecipe('balanced')">Balanced</a>
-        <a (click)="findRecipe('high-protein')">High Protein</a>
-        <a (click)="findRecipe('low-carb')">Low Carb</a>
+        <a class="balanced"(click)="findRecipe('balanced')">Balanced</a>
+        <a class="protein"(click)="findRecipe('high-protein')">High Protein</a>
+        <a class="carb"(click)="findRecipe('low-carb')">Low Carb</a>
     </div>
     <div class="dietaryRestrictions">
         <div class="title">Allergy Friendly</div>
-        <a (click)="findRecipeHealth('peanut-free')">Peanut Free</a>
-        <a (click)="findRecipeHealth('tree-nut-free')">Tree Nut Free</a>
-        <a (click)="findRecipeHealth('alcohol-free')">Alcohol Free</a>
+        <a class="peanut" (click)="findRecipeHealth('peanut-free')">Peanut Free</a>
+        <a class="tree" (click)="findRecipeHealth('tree-nut-free')">Tree Nut Free</a>
+        <a class="alcohol" (click)="findRecipeHealth('alcohol-free')">Alcohol Free</a>
     </div>
     <div class="healthType">
         <div class="title">Healthy Eating</div>
-        <a (click)="findRecipeHealth('sugar-conscious')">Sugar Conscious</a>
-        <a (click)="findRecipeHealth('vegan')">Vegan</a>
-        <a (click)="findRecipeHealth('vegetarian')">Vegetarian</a>
+        <a class="sugar"(click)="findRecipeHealth('sugar-conscious')">Sugar Conscious</a>
+        <a class="vegan"(click)="findRecipeHealth('vegan')">Vegan</a>
+        <a class="veg"(click)="findRecipeHealth('vegetarian')">Vegetarian</a>
     </div>
 </div>
