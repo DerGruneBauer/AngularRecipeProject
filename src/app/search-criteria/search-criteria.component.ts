@@ -34,6 +34,7 @@ export class SearchCriteriaComponent implements OnInit {
       this.initialSearchItems = data;
       this.searchItems = this.initialSearchItems.hits;
     });
+    this.showBrowseForm = false;
   }
 
   healthSearchRecipes(query: string) {
@@ -43,6 +44,7 @@ export class SearchCriteriaComponent implements OnInit {
         this.searchItems = this.initialSearchItems.hits;
       }
     );
+    this.showBrowseForm = false;
   }
   
   getSearchItems(){
@@ -57,15 +59,6 @@ export class SearchCriteriaComponent implements OnInit {
   closePopUp(){
     this.showPopUp = false;
   }
-
-
-  // heartColor(i) {
-  //   const color = this.favoriteService.favorites.includes(this.searchItems[i]) ? 'red' : 'gray';
-  //   console.log(color);
-  //   console.log(this.favoriteService.favorites);
-  //   console.log(this.searchItems[i]);
-  //   return color;
-  // }
 
   addOrRemoveFavorite(recipe: object) {
     if (this.favoriteService.favorites.includes(recipe)) {
