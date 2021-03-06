@@ -15,29 +15,13 @@ export class FavoritesService {
     return this.favorites;
   }
 
+  //add a recipe to the favorites array
   addFavorite(recipe: object) {
     this.favorites.push(recipe);
     return this;
   }
 
-  addRecipeInfo(recipe: object){
-    this.favoritePopUp.push(recipe);
-       if (this.favoritePopUp.length > 1){
-         this.favoritePopUp.splice(0, 1);
-         return this;
-       } else {
-         return this;
-       }
-   }
-
-   getFavoritePop(){
-     return this.favoritePopUp;
-   }
-
-  // contains(recipe: object): boolean {
-  //   return this.favorites.includes(recipe);
-  // }
-
+  //remove a recipe from the favorites array
   removeFavorite(recipe: object) {
     let index: number = this.favorites.findIndex(
       (element) => element === recipe
@@ -46,4 +30,21 @@ export class FavoritesService {
     this.favorites.splice(index, 1);
     return this.favorites;
   }
+
+  //add a recipe to the PopUp Window
+  addRecipeInfo(recipe: object) {
+    this.favoritePopUp.push(recipe);
+    if (this.favoritePopUp.length > 1) {
+      this.favoritePopUp.splice(0, 1);
+      return this;
+    } else {
+      return this;
+    }
+  }
+
+  //Show PopUp or Not
+  getFavoritePop() {
+    return this.favoritePopUp;
+  }
+
 }

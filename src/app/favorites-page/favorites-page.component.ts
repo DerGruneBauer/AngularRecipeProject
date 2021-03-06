@@ -8,29 +8,31 @@ import { FavoritesService } from '../favorites.service';
 })
 export class FavoritesPageComponent implements OnInit {
 
-  constructor( private favoritesService: FavoritesService ) { }
+  constructor(private favoritesService: FavoritesService) { }
 
   showFavPopUp: boolean = false;
-  ngOnInit(): void {
+  ngOnInit(): void { }
 
-  }
- 
+  //return favorites array
   get favorites() {
     return this.favoritesService.getFavorites();
+  }
+
+  //remove from favorites array
+  removeFavorite(index: number) {
+    return this.favoritesService.favorites.splice(index, 1);
   }
 
   // get popUp() {
   //   return this.favoritesService.addRecipeInfo;
   // }
 
+  //add info to PopUp Window
   openPopUp(item: object) {
     this.favoritesService.addRecipeInfo(item);
   }
 
-  removeFavorite(index: number) {
-    return this.favoritesService.favorites.splice(index, 1);
-  }
-
+  //toggle if the PopUp Window is showing or not
   closePopUp() {
     this.showFavPopUp = false;
   }

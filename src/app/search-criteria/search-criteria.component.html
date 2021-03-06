@@ -1,5 +1,8 @@
 <div class="searchWrapper">
-  <div class="titleAndInput" [style.height] = "searchItems.length != 0 ? '10%' : '30%'">
+  <div
+    class="titleAndInput"
+    [style.height]="searchItems.length != 0 ? '10%' : '30%'"
+  >
     <span *ngIf="searchItems.length == 0">Search For Something Below</span>
     <div class="searchFunction">
       <button class="browseButton" (click)="showBrowseForm = !showBrowseForm">
@@ -26,24 +29,20 @@
     >
       <div
         class="picture"
-        [style.background-image]="
-          'url(' + this.searchItems[i].recipe.image + ')'
-        "
+        [style.background-image]="'url(' + item.recipe.image + ')'"
       ></div>
-      <div class="title">{{ this.searchItems[i].recipe.label }}</div>
+      <div class="title">{{ item.recipe.label }}</div>
 
       <div class="heart-container">
         <button
           class="heart"
-          (click)="
-            addOrRemoveFavorite(this.searchItems[i]); $event.stopPropagation()
-          "
+          (click)="addOrRemoveFavorite(item); $event.stopPropagation()"
         >
           <i
             class="fas fa-heart"
             [ngClass]="{
-              red: favoriteService.favorites.includes(this.searchItems[i]),
-              gray: !favoriteService.favorites.includes(this.searchItems[i])
+              red: favoriteService.favorites.includes(item),
+              gray: !favoriteService.favorites.includes(item)
             }"
           ></i>
         </button>
